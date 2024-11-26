@@ -25,4 +25,9 @@ class Product(models.Model):
 #if i delete the 0001 file, database will crash
 # #if i delete any of the migration files, django will know, bcz it creates an entry for each migration in its database. and hhence the app will crash
 
+
 # everytime i hit the migrate command , it creates a state for the model and compares with the older state and thats how it knows, there are changes made to the database
+
+class Car(models.Model):
+    car_name=models.CharField(max_length=500)
+    speed=models.IntegerField(default=50)
